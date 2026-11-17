@@ -1,5 +1,7 @@
 import { isTauri } from "@tauri-apps/api/core";
 import { platform } from "@tauri-apps/plugin-os";
+import { runBackGestureHandlers } from "#lib/platform/back-gesture-event.svelte.ts";
+import { canGoBack } from "#lib/util/history.ts";
 
 
 const EDGE_WIDTH = 24;
@@ -64,6 +66,9 @@ export function installIosBackSwipe(): () => void {
 		if (dx < SWIPE_THRESHOLD || dx < Math.abs(dy) * HORIZONTAL_RATIO) {
 			return;
 		}
+
+		if (runBackGestureHandlers()) return;
+		if (canGoBack()) history.back();
 
 
 	}
