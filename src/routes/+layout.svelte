@@ -8,6 +8,7 @@
 	import { onMount, untrack } from "svelte";
 	import { Toaster } from "svelte-sonner";
 
+	import { installIosBackSwipe } from "#lib/platform/ios-back-swipe.ts";
 	import { appLifecycle } from "$lib/api/app-lifecycle.svelte";
 	import { startGoogleHandoffWatch } from "$lib/api/google-handoff";
 	import {
@@ -66,6 +67,7 @@
 		const releaseNativeMenuBlock = blockNativeMenu();
 		const releaseHoverPointer = trackHoverPointer();
 		const releaseInAppLinks = keepLinksInApp();
+		const releaseIosBackSwipe = installIosBackSwipe();
 		if (isAndroidPlatform()) {
 			void registerAndroidBackButtonListener().catch((error) => {
 				console.error("Failed to register back button listener", error);
@@ -82,6 +84,7 @@
 			releaseNativeMenuBlock();
 			releaseHoverPointer();
 			releaseInAppLinks();
+			releaseIosBackSwipe();
 		};
 	});
 
