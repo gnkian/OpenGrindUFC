@@ -1,12 +1,12 @@
 # OpenGrindUFC for iOS
 
-> Update Fixes are now Merged to Original Build: [View Commit](https://git.opengrind.org/open-grind/open-grind/pulls/502/commits/c9c133e38ab26c3e497cf2ce33ffd7bc727cfea0)
+> Update: Patches from this repository are now Merged to Original Build: [View Commit](https://git.opengrind.org/open-grind/open-grind/pulls/502/commits/c9c133e38ab26c3e497cf2ce33ffd7bc727cfea0)
 
 ### Open Grind for iOS (Unofficial Debug Build)
 
 An unofficial iOS Client of [Open Grind](https://git.opengrind.org/open-grind/open-grind), for those who would like to try it out, created to make Open Grind usable on iPhone while waiting for an official iOS release from the original project.
 
-**Download**: [IPA](https://github.com/veilrift/OpenGrindUFC/releases/tag/main)
+**Download**: [View Releases](https://github.com/veilrift/OpenGrindUFC/releases/)
 
 ---
 
